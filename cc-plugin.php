@@ -462,8 +462,40 @@ acf_add_local_field_group(array (
 			'min' => '',
 			'max' => '',
 			'return_format' => 'id',
+    ),
+		array (
+			'key' => 'hrh_field_290320201231',
+			'label' => 'Instagram',
+			'name' => 'instagram_url',
+			'type' => 'url',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
 		),
-	),
+		array (
+			'key' => 'hrh_field_290320201232',
+			'label' => 'Instagram Image',
+			'name' => 'instagram_image',
+			'type' => 'url',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+		),
+  ),
 	'location' => array (
 		array (
 			array (

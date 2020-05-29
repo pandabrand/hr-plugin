@@ -53,15 +53,19 @@ function hr_run_once(){
       $taxonomy = 'glossary';
       $alphabet = array();
 
-      $posts = get_posts(array(
-        'numberposts' => -1,
-        'post_type' => array('city', 'location', 'artist')
-        ) );
+      $post_types = array('city', 'location', 'artist');
+      foreach($post_types as $post_type) {
 
-      foreach( $posts as $p ) :
-      //set term as first letter of post title, lower case
-      wp_set_post_terms( $p->ID, strtolower(substr($p->post_title, 0, 1)), $taxonomy );
-      endforeach;
+        $posts = get_posts(array(
+          'numberposts' => -1,
+          'post_type' => $post_type
+        ) );
+          
+        foreach( $posts as $p ) :
+          //set term as first letter of post title, lower case
+          wp_set_post_terms( $p->ID, strtolower(substr($p->post_title, 0, 1)), $taxonomy );
+        endforeach;
+      }
 
       set_transient( 'hr_run_once', 'true' );
 

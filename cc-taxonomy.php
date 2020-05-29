@@ -53,7 +53,10 @@ function hr_run_once(){
       $taxonomy = 'glossary';
       $alphabet = array();
 
-      $posts = get_posts(array('numberposts' => -1) );
+      $posts = get_posts(array(
+        'numberposts' => -1,
+        'post_type' => array('city', 'location', 'artist')
+        ) );
 
       foreach( $posts as $p ) :
       //set term as first letter of post title, lower case

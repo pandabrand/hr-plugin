@@ -73,9 +73,3 @@ function hr_run_once(){
 
 }
 add_action('init','hr_run_once');
-
-add_action( 'init', 'wpname_unregister_taxonomy' );
- 
-function wpname_unregister_taxonomy() {
-    unregister_taxonomy( 'hr_add_vibe_manager_category');
-}

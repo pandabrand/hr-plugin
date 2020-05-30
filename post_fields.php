@@ -363,7 +363,7 @@ if( function_exists('acf_add_local_field_group') ):
 
 	acf_add_local_field_group(array(
 		'key' => 'group_5ed29f0ab1c48',
-		'title' => 'Vibe Manager Fileds',
+		'title' => 'Vibe Manager Fields',
 		'fields' => array(
 			array(
 				'key' => 'field_5ed29f1877856',

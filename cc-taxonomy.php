@@ -73,3 +73,31 @@ function hr_run_once(){
 
 }
 add_action('init','hr_run_once');
+
+function hr_add_vibe_manager_category() {
+	$labels = array(
+		'name'              => _x( 'Vibe Managers', 'taxonomy general name', 'textdomain' ),
+		'singular_name'     => _x( 'Vibe Manager', 'taxonomy singular name', 'textdomain' ),
+		'search_items'      => __( 'Search Vibe Managers', 'textdomain' ),
+		'all_items'         => __( 'All Vibe Managers', 'textdomain' ),
+		'parent_item'       => __( 'Parent Vibe Manager', 'textdomain' ),
+		'parent_item_colon' => __( 'Parent Vibe Manager:', 'textdomain' ),
+		'edit_item'         => __( 'Edit Vibe Manager', 'textdomain' ),
+		'update_item'       => __( 'Update Vibe Manager', 'textdomain' ),
+		'add_new_item'      => __( 'Add New Vibe Manager', 'textdomain' ),
+		'new_item_name'     => __( 'New Vibe Manager Name', 'textdomain' ),
+		'menu_name'         => __( 'Vibe Manager', 'textdomain' ),
+	);
+
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'vibe-manager' ),
+	);
+
+	register_taxonomy( 'vibe-manager', array( 'artist' ), $args );
+}
+add_action('init', 'hr_add_vibe_manager_category');

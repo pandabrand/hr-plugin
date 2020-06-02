@@ -1,6 +1,6 @@
 {
   "name": "Hardrock Hotel Travel API",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "API for access to culturecollide.com",
   "title": "Hardrock Hotel Travel API Doc",
   "sampleUrl" : "https://culturecollide.com/wp-json/cc-api/v1",

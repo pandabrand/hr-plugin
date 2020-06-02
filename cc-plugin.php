@@ -4,7 +4,7 @@ Plugin Name: Hardrock Hotel Travel Custom Post Types
 Description: Custom Post Types for Hardrock Hotel Travel website.
 Author: Frederick Wells
 Author URI: http://www.pandabrand.net
-Version: 1.0.1
+Version: 1.0.4
 */
 
 

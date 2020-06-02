@@ -3,7 +3,7 @@
   "version": "dev-master",
   "source": {
     "type": "git",
-    "url": "https://github.com/pandabrand/cc-plugin.git",
+    "url": "https://github.com/pandabrand/hr-plugin.git",
     "reference": "origin/master"
   },
   "description": "Plugin for Hardrock Travel website",

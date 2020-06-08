@@ -63,6 +63,32 @@ function culture_collide_cpt() {
     'show_in_rest'       => true
   ));
 
+  //Vibe Manager post type
+  register_post_type( 'vibe-manager', array(
+    'labels' => array(
+      'name' => 'Vibe Managers',
+      'singular_name' => 'Vibe Manager',
+      'menu_name' => 'Vibe Manager',
+      'name_admin_bar' => 'Vibe Manager',
+      'add_new' => 'Add New',
+      'add_new_item' => 'Add New Vibe Manager',
+      'edit_item' => 'Edit Vibe Manager',
+      'new_item' => 'New Vibe Manager',
+      'view_item' => 'View Vibe Manager',
+      'search_items' => 'Search Vibe Managers',
+      'not_found' => 'No Vibe Managers found',
+      'not_found_in_trash' => 'No Vibe Managers in the trash.',
+      'all_items' => 'Vibe Managers',
+     ),
+    'description' => 'Vibe Managers are post types that will be used in the Travel section of the Culture Collide website. Vibe Managers will have a City post type and will have multiple Locations.',
+    'public' => true,
+    'menu_position' => 2,
+    'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
+    'show_in_nav_menus' => true,
+    'has_archive' => true,
+    'show_in_rest'       => true
+  ));
+
   //Location post type
   register_post_type( 'location', array(
     'labels' => array(
@@ -234,6 +260,13 @@ acf_add_local_field_group(array (
         'param' => 'post_type',
         'operator' => '==',
         'value' => 'artist',
+      ),
+    ),
+    array (
+      array (
+        'param' => 'post_type',
+        'operator' => '==',
+        'value' => 'vibe-manager',
       ),
     ),
   ),

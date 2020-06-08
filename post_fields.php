@@ -296,6 +296,13 @@ acf_add_local_field_group(array (
 				'value' => 'artist',
 			),
 		),
+		array (
+			array (
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'vibe-manager',
+			),
+		),
 	),
 	'menu_order' => 5,
 	'position' => 'side',

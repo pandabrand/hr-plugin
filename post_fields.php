@@ -466,7 +466,7 @@ if( function_exists('acf_add_local_field_group') ):
 			array(
 				'key' => 'field_5ee54dc22c8d9',
 				'label' => 'Image',
-				'name' => 'image',
+				'name' => 'banner_image',
 				'type' => 'image',
 				'instructions' => '',
 				'required' => 0,
@@ -490,7 +490,7 @@ if( function_exists('acf_add_local_field_group') ):
 			array(
 				'key' => 'field_5ee54dd32c8da',
 				'label' => 'Title',
-				'name' => 'title',
+				'name' => 'banner_title',
 				'type' => 'text',
 				'instructions' => '',
 				'required' => 0,
@@ -509,7 +509,7 @@ if( function_exists('acf_add_local_field_group') ):
 			array(
 				'key' => 'field_5ee54de72c8db',
 				'label' => 'Copy',
-				'name' => 'copy',
+				'name' => 'banner_copy',
 				'type' => 'wysiwyg',
 				'instructions' => '',
 				'required' => 0,
@@ -528,7 +528,7 @@ if( function_exists('acf_add_local_field_group') ):
 			array(
 				'key' => 'field_5ee54e002c8dc',
 				'label' => 'Link Text',
-				'name' => 'link_text',
+				'name' => 'banner_link_text',
 				'type' => 'text',
 				'instructions' => '',
 				'required' => 0,
@@ -547,7 +547,7 @@ if( function_exists('acf_add_local_field_group') ):
 			array(
 				'key' => 'field_5ee54e082c8dd',
 				'label' => 'Link',
-				'name' => 'link',
+				'name' => 'banner_link',
 				'type' => 'text',
 				'instructions' => '',
 				'required' => 0,
@@ -582,5 +582,5 @@ if( function_exists('acf_add_local_field_group') ):
 		'active' => true,
 		'description' => '',
 	));
-	
+
 	endif;

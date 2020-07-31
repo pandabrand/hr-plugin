@@ -4,7 +4,7 @@ Plugin Name: Hardrock Hotel Travel Custom Post Types
 Description: Custom Post Types for Hardrock Hotel Travel website.
 Author: Frederick Wells
 Author URI: http://www.pandabrand.net
-Version: 1.0.5
+Version: 1.0.6
 */
 
 
@@ -548,6 +548,33 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+endif;
+
+if( function_exists('acf_add_local_field_group') ):
+  acf_add_local_field_group(
+    array(
+      'key' => 'reverb_fields',
+      'title' => 'Reverb Fields',
+      'fields' => array (
+        array (
+          'key' => 'hrh_reverb_1_202009302200',
+          'label' => 'Hotel Category',
+          'name' => 'hotel_category',
+          'type' => 'taxonomy',
+          'add_term' => 0,
+        )
+      ),
+      'location' => array (
+        array (
+          array (
+            'param' => 'post_type',
+            'operator' => '==',
+            'value' => 'city',
+          ),
+        ),
+      ),  
+    )
+  );
 endif;
 //Custom Categories for Locations
 //hook into the init action and call create_locations_hierarchical_taxonomy when it fires

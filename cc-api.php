@@ -200,4 +200,8 @@ add_action( 'rest_api_init', function () {
     'callback' => 'get_locations_by_hotel_id',
   ) );
 
+  register_rest_route( 'cc-api/v2', '/city/(?P<hotelCategory>\w+)', array(
+    'methods' => WP_REST_Server::READABLE,
+    'callback' => 'get_cities_by_hotel_category',
+  ) );
 } );

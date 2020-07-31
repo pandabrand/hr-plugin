@@ -29,9 +29,11 @@ function hrh_insert_term_if_not_exists($term, $taxonomy) {
 
 function hrh_category_load_field( $field ) {
   $categories = array( 'Hard Rock Hotels', 'Reverb' );
-
+  
   foreach( $categories as $category )
   {
+    write_log($category);
+    write_log($field);
     hrh_insert_term_if_not_exists( $category, $field );
   }
 

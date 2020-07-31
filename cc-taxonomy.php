@@ -34,7 +34,7 @@ function hrh_category_load_field( $field ) {
   {
     write_log($category);
     write_log($field);
-    hrh_insert_term_if_not_exists( $category, $field );
+    hrh_insert_term_if_not_exists( $category, $field['taxonomy'] );
   }
 
   return $field;

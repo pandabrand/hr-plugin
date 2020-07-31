@@ -184,6 +184,13 @@ function deactivated($data) {
   return ["message" => "no longer active"];
 }
 
+function get_cities_by_hotel_category( $data )
+{
+  write_log( $data );
+  wp_send_json_success(array('message' => 'hi there.'));
+  wp_die();
+}
+
 add_action( 'rest_api_init', function () {
   register_rest_route( 'cc-api/v1', '/location-types/', array(
     'methods' => 'GET',

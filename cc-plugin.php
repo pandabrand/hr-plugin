@@ -550,32 +550,6 @@ acf_add_local_field_group(array (
 
 endif;
 
-if( function_exists('acf_add_local_field_group') ):
-  acf_add_local_field_group(
-    array(
-      'key' => 'reverb_fields',
-      'title' => 'Reverb Fields',
-      'fields' => array (
-        array (
-          'key' => 'hrh_reverb_1_202009302200',
-          'label' => 'Hotel Category',
-          'name' => 'hotel_category',
-          'type' => 'hotel',
-          'add_term' => 0,
-        )
-      ),
-      'location' => array (
-        array (
-          array (
-            'param' => 'post_type',
-            'operator' => '==',
-            'value' => 'city',
-          ),
-        ),
-      ),  
-    )
-  );
-endif;
 //Custom Categories for Locations
 //hook into the init action and call create_locations_hierarchical_taxonomy when it fires
 add_action( 'init', 'create_locations_hierarchical_taxonomy', 0 );

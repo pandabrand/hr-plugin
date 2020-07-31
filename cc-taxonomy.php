@@ -32,14 +32,13 @@ function hrh_category_load_field( $field ) {
   
   foreach( $categories as $category )
   {
-    write_log($field);
     hrh_insert_term_if_not_exists( $category, $field['type'] );
   }
 
   return $field;
 }
 
-add_filter('acf/load_field/name=hotel_category', 'hrh_category_load_field');
+// add_filter('acf/load_field/name=hotel_category', 'hrh_category_load_field');
 
 function hrh_register_taxonomy_hotels()
 {
@@ -59,9 +58,10 @@ function hrh_register_taxonomy_hotels()
   $args = [
     'hierarchical'      => true, // make it hierarchical (like categories)
     'labels'            => $labels,
-    'show_ui'           => false,
-    'show_admin_column' => false,
+    'show_ui'           => true,
+    'show_admin_column' => true,
     'query_var'         => true,
+    'show_in_rest'      => true,
     'rewrite'           => ['slug' => 'hotel'],
   ];
   register_taxonomy('hotel', ['city'], $args);

@@ -560,7 +560,7 @@ if( function_exists('acf_add_local_field_group') ):
           'key' => 'hrh_reverb_1_202009302200',
           'label' => 'Hotel Category',
           'name' => 'hotel_category',
-          'type' => 'taxonomy',
+          'type' => 'hotel',
           'add_term' => 0,
         )
       ),

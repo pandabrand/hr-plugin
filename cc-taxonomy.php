@@ -41,3 +41,31 @@ function hrh_category_load_field( $field ) {
 }
 
 add_filter('acf/load_field/name=hotel_category', 'hrh_category_load_field');
+
+function hrh_register_taxonomy_hotels()
+{
+  $labels = [
+    'name'              => _x('Hotels', 'taxonomy general name'),
+    'singular_name'     => _x('Hotel', 'taxonomy singular name'),
+    'search_items'      => __('Search Hotels'),
+    'all_items'         => __('All Hotels'),
+    'parent_item'       => __('Parent Hotel'),
+    'parent_item_colon' => __('Parent Hotel:'),
+    'edit_item'         => __('Edit Hotel'),
+    'update_item'       => __('Update Hotel'),
+    'add_new_item'      => __('Add New Hotel'),
+    'new_item_name'     => __('New Hotel Name'),
+    'menu_name'         => __('Hotel'),
+  ];
+  $args = [
+    'hierarchical'      => true, // make it hierarchical (like categories)
+    'labels'            => $labels,
+    'show_ui'           => false,
+    'show_admin_column' => false,
+    'query_var'         => true,
+    'rewrite'           => ['slug' => 'hotel'],
+  ];
+  register_taxonomy('hotel', ['city'], $args);
+}
+
+add_action('init', 'hrh_register_taxonomy_hotels');

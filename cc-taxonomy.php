@@ -63,6 +63,12 @@ function hrh_register_taxonomy_hotels()
     'query_var'         => true,
     'show_in_rest'      => true,
     'rewrite'           => ['slug' => 'hotel'],
+    'capabilities'      => array(
+      'assign_terms'    => 'manage_options',
+      'edit_terms'      => 'god',
+      'manage_terms'    => 'god',
+    ),
+    'show_in_nav_menus' => false,
   ];
   register_taxonomy('hotel', ['city'], $args);
 }

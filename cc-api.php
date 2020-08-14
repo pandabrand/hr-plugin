@@ -186,7 +186,19 @@ function deactivated($data) {
 
 function get_cities_by_hotel_category( $data )
 {
-  write_log( $data );
+  $hotel_property = $data['hotelCategory'];
+
+  $args = array(
+    'post_type' => ['city'],
+    'meta_query' => array(
+       array(
+           'key' => 'hotel',
+           'value' => $hotel_property,
+           'compare' => '='
+       )
+     )
+  );
+
   wp_send_json_success(array('message' => 'hi there.'));
   wp_die();
 }

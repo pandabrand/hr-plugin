@@ -4,7 +4,7 @@ Plugin Name: Hardrock Hotel Travel Custom Post Types
 Description: Custom Post Types for Hardrock Hotel Travel website.
 Author: Frederick Wells
 Author URI: http://www.pandabrand.net
-Version: 1.0.6
+Version: 1.0.7
 */
 
 
@@ -34,8 +34,11 @@ function culture_collide_cpt() {
     'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
     'show_in_nav_menus' => true,
     'has_archive' => true,
-    'show_in_rest'       => true
-  ));
+    'show_in_rest'       => true,
+    'show_in_graphql' => true,
+    'graphql_single_name' => 'city',
+    'graphql_plural_name' => 'cities',
+));
 
   //Artist post type
   register_post_type( 'artist', array(
@@ -60,7 +63,10 @@ function culture_collide_cpt() {
     'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
     'show_in_nav_menus' => true,
     'has_archive' => true,
-    'show_in_rest'       => true
+    'show_in_rest'       => true,
+    'show_in_graphql' => true,
+    'graphql_single_name' => 'city',
+    'graphql_plural_name' => 'cities',
   ));
 
   //Vibe Manager post type
@@ -86,7 +92,10 @@ function culture_collide_cpt() {
     'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
     'show_in_nav_menus' => true,
     'has_archive' => true,
-    'show_in_rest'       => true
+    'show_in_rest'       => true,
+    'show_in_graphql' => true,
+    'graphql_single_name' => 'city',
+    'graphql_plural_name' => 'cities',
   ));
 
   //Location post type
@@ -112,7 +121,10 @@ function culture_collide_cpt() {
     'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
     'show_in_nav_menus' => true,
     'has_archive' => true,
-    'show_in_rest'       => true
+    'show_in_rest'       => true,
+    'show_in_graphql' => true,
+    'graphql_single_name' => 'city',
+    'graphql_plural_name' => 'cities',
   ));
 }
 

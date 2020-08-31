@@ -65,8 +65,8 @@ function culture_collide_cpt() {
     'has_archive' => true,
     'show_in_rest'       => true,
     'show_in_graphql' => true,
-    'graphql_single_name' => 'city',
-    'graphql_plural_name' => 'cities',
+    'graphql_single_name' => 'artist',
+    'graphql_plural_name' => 'artists',
   ));
 
   //Vibe Manager post type
@@ -94,8 +94,8 @@ function culture_collide_cpt() {
     'has_archive' => true,
     'show_in_rest'       => true,
     'show_in_graphql' => true,
-    'graphql_single_name' => 'city',
-    'graphql_plural_name' => 'cities',
+    'graphql_single_name' => 'vibe-manager',
+    'graphql_plural_name' => 'vibe-managers',
   ));
 
   //Location post type
@@ -123,8 +123,8 @@ function culture_collide_cpt() {
     'has_archive' => true,
     'show_in_rest'       => true,
     'show_in_graphql' => true,
-    'graphql_single_name' => 'city',
-    'graphql_plural_name' => 'cities',
+    'graphql_single_name' => 'location',
+    'graphql_plural_name' => 'locations',
   ));
 }
 

@@ -94,8 +94,8 @@ function culture_collide_cpt() {
     'has_archive' => true,
     'show_in_rest'       => true,
     'show_in_graphql' => true,
-    'graphql_single_name' => 'vibe-manager',
-    'graphql_plural_name' => 'vibe-managers',
+    'graphql_single_name' => 'vibe_manager',
+    'graphql_plural_name' => 'vibe_managers',
   ));
 
   //Location post type

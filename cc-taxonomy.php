@@ -38,7 +38,7 @@ function hrh_category_load_field( $field ) {
   return $field;
 }
 
-// add_filter('acf/load_field/name=hotel_category', 'hrh_category_load_field');
+add_filter('acf/load_field/name=hotel_category', 'hrh_category_load_field');
 
 function hrh_register_taxonomy_hotels()
 {

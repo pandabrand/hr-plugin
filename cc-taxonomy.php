@@ -38,7 +38,7 @@ function hrh_category_load_field( $field ) {
   return $field;
 }
 
-add_filter('acf/load_field/name=hotel_category', 'hrh_category_load_field');
+// add_filter('acf/load_field/name=hotel_category', 'hrh_category_load_field');
 
 function hrh_register_taxonomy_hotels()
 {
@@ -74,3 +74,11 @@ function hrh_register_taxonomy_hotels()
 }
 
 add_action('init', 'hrh_register_taxonomy_hotels');
+
+function hrh_add_hotel_terms() {
+  $hotels = array( 'Hard Rock Hotels', 'Reverb' );
+  foreach( $hotels as $hotel ) {
+    hrh_insert_term_if_not_exists( $hotel, 'hotel' );
+  }
+}
+add_action( 'init', 'hrh_add_hotel_terms' );

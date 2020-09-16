@@ -34,7 +34,8 @@ function trigger_reverb_build() {
 	    'Content-Length: ' . strlen($data_string))                                                                       
 	);                                                                                                                   
 	                                                                                                                     
-	$result = curl_exec($ch);
+  $result = curl_exec($ch);
+  write_log($result);
 	$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 	curl_close($ch);
 

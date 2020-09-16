@@ -9,11 +9,13 @@ function should_trigger_reverb_build( $post_id, $post, $update ) {
 
   if ( $post->post_type == 'artist' ) {
     $artist_city = get_field('artist_city', $post_id);
+    write_log($artist_city);
     $city_id = $artist_city->ID;
   }
 
   if ( $post->post_type == 'location' ) {
     $location_city = get_field('location_city', $post_id);
+    write_log($location_city);
     $city_id = $location_city;
   }
 
@@ -35,7 +37,6 @@ function trigger_reverb_build() {
 	);                                                                                                                   
 	                                                                                                                     
   $result = curl_exec($ch);
-  write_log($result);
 	$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 	curl_close($ch);
 

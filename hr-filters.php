@@ -10,12 +10,12 @@ function should_trigger_reverb_build( $post_id, $post, $update ) {
   if ( $post->post_type == 'artist' ) {
     $artist_city_array = get_field('artist_city', $post->ID);
     $artist_city = array_pop( $artist_city_array );
-    write_log($artist_city);
     $city_id = $artist_city->ID;
   }
 
   if ( $post->post_type == 'location' ) {
-    $location_city = get_field('location_city', $post->ID);
+    $location_city_array = get_field('location_city', $post->ID);
+    $location_city = array_pop( $location_city_array );
     write_log($location_city);
     $city_id = $location_city;
   }

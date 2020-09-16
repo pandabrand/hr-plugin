@@ -16,7 +16,6 @@ function should_trigger_reverb_build( $post_id, $post, $update ) {
   if ( $post->post_type == 'location' ) {
     $location_city_array = get_field('location_city', $post->ID);
     $location_city = array_pop( $location_city_array );
-    write_log($location_city);
     $city_id = $location_city;
   }
 

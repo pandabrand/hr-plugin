@@ -203,6 +203,19 @@ function get_cities_by_hotel_category( $data )
   wp_die();
 }
 
+function reverb_success_notice() {
+?>
+  <div class="notice notice-success is-dismissible">
+    <p><?php _e( 'Reverb has been rebuilt!', 'hrh-text-domain'); ?></p>
+  </div>
+<?php
+}
+add_action( 'admin_notices', 'reverb_success_notice' );
+
+function reverb_build_success() {
+  do_action('reverb_success_notice');
+}
+
 add_action( 'rest_api_init', function () {
   register_rest_route( 'cc-api/v1', '/location-types/', array(
     'methods' => 'GET',
@@ -222,5 +235,10 @@ add_action( 'rest_api_init', function () {
   register_rest_route( 'cc-api/v2', '/city/(?P<hotelCategory>\w+)', array(
     'methods' => WP_REST_Server::READABLE,
     'callback' => 'get_cities_by_hotel_category',
+  ) );
+
+  register_rest_route( 'hrhr/v1', '/success', array(
+    'methods' => WP_REST_Server::CREATABLE,
+    'callback' => 'reverb_build_success',
   ) );
 } );

@@ -210,10 +210,9 @@ function reverb_success_notice() {
   </div>
 <?php
 }
-add_action( 'admin_notices', 'reverb_success_notice' );
 
 function reverb_build_success() {
-  do_action('reverb_success_notice');
+  add_action( 'admin_notices', 'reverb_success_notice' );
 }
 
 add_action( 'rest_api_init', function () {

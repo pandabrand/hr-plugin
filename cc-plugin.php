@@ -91,7 +91,7 @@ function culture_collide_cpt() {
     'menu_position' => 2,
     'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
     'show_in_nav_menus' => true,
-    'has_archive' => true,
+    'has_archive' => false,
     'show_in_rest'       => true,
     'show_in_graphql' => true,
     'graphql_single_name' => 'vibe_manager',

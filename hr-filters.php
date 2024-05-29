@@ -1,5 +1,7 @@
 <?php
 add_action( 'save_post', 'should_trigger_reverb_build', 10,3 );
+add_action( 'edit_attachment', 'attachment_should_trigger_reverb_build' );
+
 function should_trigger_reverb_build( $post_id, $post, $update ) {
   $city_id = null;
 
@@ -21,11 +23,13 @@ function should_trigger_reverb_build( $post_id, $post, $update ) {
 
   if( in_array( $city_id, reverb_cities() ) ) {
     trigger_reverb_build( $city_id );
-  } elseif ( 'attachment' === $post->post_type ) {
-    // Again, less clunky way to do this but we're rolling with it for now
-    trigger_reverb_build( 49384 );
-    trigger_reverb_build( 48142 );
   }
+}
+
+function attachment_should_trigger_reverb_build( $post_id ) {
+  // Again, less clunky way to do this but we're rolling with it for now
+  trigger_reverb_build( 49384 );
+  trigger_reverb_build( 48142 );
 }
 
 function trigger_reverb_build( $city_id = null ) {
